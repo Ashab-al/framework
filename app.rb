@@ -3,15 +3,15 @@ require_relative 'my_framework'
 app = MyFramework.new
 
 app.get '/' do |req|
-  "Это главная страница"
+  'Hello, World!'
 end
 
 app.get '/about' do |req|
-  "Это страницап about"
+  "This page about"
 end
     
 app.post '/submit' do |req|
-  "Запрос: #{req.body}"
+  "Request: #{req.body}"
 end
 
 app.start
