@@ -3,7 +3,7 @@ require_relative 'my_framework'
 app = MyFramework.new
 
 app.get '/' do |req|
-  'Hello, World!'
+  "<h2>Hello in Style!</h2>"
 end
 
 app.get '/about' do |req|

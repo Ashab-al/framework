@@ -19,6 +19,7 @@ class MyFramework
 
   # запуск сервера webrick
   def start(port = 8000)
+ 
     server = WEBrick::HTTPServer.new(:Port => port)
 
     # обрабатываем каждый запрос
@@ -39,6 +40,7 @@ class MyFramework
       # возврат ответа с существующего route
       response = route[:block].call(req)
       res.body = response
+      res['Content-Type'] = "text/html"
     else
       # Возврат 404
       res.status = 404
